@@ -2805,8 +2805,8 @@ var app = (function (exports) {
     const { Error: Error_1$2 } = globals;
     const file$3 = "src\\Pages\\Crop.svelte";
 
-    // (112:12) {#if currClass =="inp"}
-    function create_if_block_3$3(ctx) {
+    // (131:12) {#if currClass =="inp"}
+    function create_if_block_8$1(ctx) {
     	let button;
     	let button_transition;
     	let current;
@@ -2817,15 +2817,15 @@ var app = (function (exports) {
     		c: function create() {
     			button = element("button");
     			button.textContent = "Find";
-    			attr_dev(button, "class", "inp svelte-16ydpxe");
-    			add_location(button, file$3, 112, 16, 4196);
+    			attr_dev(button, "class", "inp svelte-1drdosz");
+    			add_location(button, file$3, 131, 16, 5051);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*Find*/ ctx[7], false, false, false);
+    				dispose = listen_dev(button, "click", /*Find*/ ctx[12], false, false, false);
     				mounted = true;
     			}
     		},
@@ -2855,17 +2855,17 @@ var app = (function (exports) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3$3.name,
+    		id: create_if_block_8$1.name,
     		type: "if",
-    		source: "(112:12) {#if currClass ==\\\"inp\\\"}",
+    		source: "(131:12) {#if currClass ==\\\"inp\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (117:12) {#if incomplete}
-    function create_if_block_2$3(ctx) {
+    // (136:12) {#if incomplete}
+    function create_if_block_7$1(ctx) {
     	let div;
     	let div_transition;
     	let current;
@@ -2874,9 +2874,253 @@ var app = (function (exports) {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Enter all details";
-    			set_style(div, "color", "red");
-    			set_style(div, "padding-left", "20px");
-    			add_location(div, file$3, 117, 16, 4418);
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 136, 16, 5273);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_7$1.name,
+    		type: "if",
+    		source: "(136:12) {#if incomplete}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (141:12) {#if invalid}
+    function create_if_block_6$1(ctx) {
+    	let div;
+    	let div_transition;
+    	let current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Entered values are invalid";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 141, 16, 5479);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_6$1.name,
+    		type: "if",
+    		source: "(141:12) {#if invalid}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (146:12) {#if N_invalid}
+    function create_if_block_5$1(ctx) {
+    	let div;
+    	let div_transition;
+    	let current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Nitrogen value is invalid to grow any crop";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 146, 16, 5696);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_5$1.name,
+    		type: "if",
+    		source: "(146:12) {#if N_invalid}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (151:12) {#if P_invalid}
+    function create_if_block_4$2(ctx) {
+    	let div;
+    	let div_transition;
+    	let current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Phosphorous value is invalid to grow any crop";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 151, 16, 5930);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4$2.name,
+    		type: "if",
+    		source: "(151:12) {#if P_invalid}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (156:12) {#if K_invalid}
+    function create_if_block_3$3(ctx) {
+    	let div;
+    	let div_transition;
+    	let current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Potassium value is invalid to grow any crop";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 156, 16, 6167);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, scale, { duration: 200, start: 0, opacity: 0.1 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3$3.name,
+    		type: "if",
+    		source: "(156:12) {#if K_invalid}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (161:12) {#if temp_invalid}
+    function create_if_block_2$3(ctx) {
+    	let div;
+    	let div_transition;
+    	let current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Temperature is invalid to grow any crop";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 161, 16, 6404);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2907,14 +3151,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_2$3.name,
     		type: "if",
-    		source: "(117:12) {#if incomplete}",
+    		source: "(161:12) {#if temp_invalid}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (120:12) {#if invalid}
+    // (166:12) {#if pH_invalid}
     function create_if_block_1$3(ctx) {
     	let div;
     	let div_transition;
@@ -2923,10 +3167,9 @@ var app = (function (exports) {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			div.textContent = "Entered values are invalid";
-    			set_style(div, "color", "red");
-    			set_style(div, "padding-left", "20px");
-    			add_location(div, file$3, 120, 12, 4604);
+    			div.textContent = "pH value is invalid to grow any crop";
+    			attr_dev(div, "class", "errMSG svelte-1drdosz");
+    			add_location(div, file$3, 166, 16, 6635);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2957,14 +3200,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(120:12) {#if invalid}",
+    		source: "(166:12) {#if pH_invalid}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (125:8) {#if runML}
+    // (173:8) {#if runML}
     function create_if_block$3(ctx) {
     	let div;
     	let h2;
@@ -2985,12 +3228,12 @@ var app = (function (exports) {
     			t2 = space();
     			p = element("p");
     			t3 = text(/*predictionDesc*/ ctx[4]);
-    			attr_dev(h2, "class", "svelte-16ydpxe");
-    			add_location(h2, file$3, 126, 12, 4871);
-    			attr_dev(p, "class", "svelte-16ydpxe");
-    			add_location(p, file$3, 127, 12, 4922);
-    			attr_dev(div, "class", "modelWindow svelte-16ydpxe");
-    			add_location(div, file$3, 125, 8, 4815);
+    			attr_dev(h2, "class", "svelte-1drdosz");
+    			add_location(h2, file$3, 174, 12, 6928);
+    			attr_dev(p, "class", "svelte-1drdosz");
+    			add_location(p, file$3, 175, 12, 6979);
+    			attr_dev(div, "class", "modelWindow svelte-1drdosz");
+    			add_location(div, file$3, 173, 8, 6872);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3031,7 +3274,7 @@ var app = (function (exports) {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(125:8) {#if runML}",
+    		source: "(173:8) {#if runML}",
     		ctx
     	});
 
@@ -3088,15 +3331,25 @@ var app = (function (exports) {
     	let t15;
     	let t16;
     	let t17;
-    	let div_intro;
     	let t18;
+    	let t19;
+    	let t20;
+    	let t21;
+    	let t22;
+    	let div_intro;
+    	let t23;
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*currClass*/ ctx[1] == "inp" && create_if_block_3$3(ctx);
-    	let if_block1 = /*incomplete*/ ctx[5] && create_if_block_2$3(ctx);
-    	let if_block2 = /*invalid*/ ctx[6] && create_if_block_1$3(ctx);
-    	let if_block3 = /*runML*/ ctx[2] && create_if_block$3(ctx);
+    	let if_block0 = /*currClass*/ ctx[1] == "inp" && create_if_block_8$1(ctx);
+    	let if_block1 = /*incomplete*/ ctx[5] && create_if_block_7$1(ctx);
+    	let if_block2 = /*invalid*/ ctx[6] && create_if_block_6$1(ctx);
+    	let if_block3 = /*N_invalid*/ ctx[7] && create_if_block_5$1(ctx);
+    	let if_block4 = /*P_invalid*/ ctx[8] && create_if_block_4$2(ctx);
+    	let if_block5 = /*K_invalid*/ ctx[9] && create_if_block_3$3(ctx);
+    	let if_block6 = /*temp_invalid*/ ctx[10] && create_if_block_2$3(ctx);
+    	let if_block7 = /*pH_invalid*/ ctx[11] && create_if_block_1$3(ctx);
+    	let if_block8 = /*runML*/ ctx[2] && create_if_block$3(ctx);
 
     	const block = {
     		c: function create() {
@@ -3140,48 +3393,58 @@ var app = (function (exports) {
     			if (if_block2) if_block2.c();
     			t18 = space();
     			if (if_block3) if_block3.c();
-    			add_location(h1, file$3, 102, 4, 2635);
+    			t19 = space();
+    			if (if_block4) if_block4.c();
+    			t20 = space();
+    			if (if_block5) if_block5.c();
+    			t21 = space();
+    			if (if_block6) if_block6.c();
+    			t22 = space();
+    			if (if_block7) if_block7.c();
+    			t23 = space();
+    			if (if_block8) if_block8.c();
+    			add_location(h1, file$3, 121, 4, 3486);
     			attr_dev(input0, "type", "number");
-    			attr_dev(input0, "class", input0_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			attr_dev(input0, "class", input0_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input0, "placeholder", "Nitrogen");
-    			add_location(input0, file$3, 104, 12, 2847);
-    			add_location(br0, file$3, 104, 177, 3012);
+    			add_location(input0, file$3, 123, 12, 3698);
+    			add_location(br0, file$3, 123, 177, 3863);
     			attr_dev(input1, "type", "number");
-    			attr_dev(input1, "class", input1_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			attr_dev(input1, "class", input1_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input1, "placeholder", "Phosphorus");
-    			add_location(input1, file$3, 105, 12, 3030);
-    			add_location(br1, file$3, 105, 179, 3197);
+    			add_location(input1, file$3, 124, 12, 3881);
+    			add_location(br1, file$3, 124, 179, 4048);
     			attr_dev(input2, "type", "number");
-    			attr_dev(input2, "class", input2_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			attr_dev(input2, "class", input2_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input2, "placeholder", "Potasium");
-    			add_location(input2, file$3, 106, 12, 3215);
-    			add_location(br2, file$3, 106, 177, 3380);
-    			attr_dev(input3, "type", "text");
-    			attr_dev(input3, "class", input3_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			add_location(input2, file$3, 125, 12, 4066);
+    			add_location(br2, file$3, 125, 177, 4231);
+    			attr_dev(input3, "type", "number");
+    			attr_dev(input3, "class", input3_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input3, "placeholder", "Temperature");
-    			add_location(input3, file$3, 107, 12, 3398);
-    			add_location(br3, file$3, 107, 181, 3567);
-    			attr_dev(input4, "type", "text");
-    			attr_dev(input4, "class", input4_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			add_location(input3, file$3, 126, 12, 4249);
+    			add_location(br3, file$3, 126, 183, 4420);
+    			attr_dev(input4, "type", "number");
+    			attr_dev(input4, "class", input4_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input4, "placeholder", "Humidity");
-    			add_location(input4, file$3, 108, 12, 3585);
-    			add_location(br4, file$3, 108, 177, 3750);
+    			add_location(input4, file$3, 127, 12, 4438);
+    			add_location(br4, file$3, 127, 179, 4605);
     			attr_dev(input5, "type", "number");
-    			attr_dev(input5, "class", input5_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			attr_dev(input5, "class", input5_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input5, "placeholder", "pH level");
-    			add_location(input5, file$3, 109, 12, 3768);
-    			add_location(br5, file$3, 109, 177, 3933);
+    			add_location(input5, file$3, 128, 12, 4623);
+    			add_location(br5, file$3, 128, 177, 4788);
     			attr_dev(input6, "type", "number");
-    			attr_dev(input6, "class", input6_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"));
+    			attr_dev(input6, "class", input6_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"));
     			attr_dev(input6, "placeholder", "Rainfall (in mm)");
-    			add_location(input6, file$3, 110, 12, 3951);
-    			add_location(br6, file$3, 110, 190, 4129);
+    			add_location(input6, file$3, 129, 12, 4806);
+    			add_location(br6, file$3, 129, 190, 4984);
     			set_style(div, "text-align", "left");
     			set_style(div, "width", "30%");
     			set_style(div, "float", "left");
-    			add_location(div, file$3, 103, 8, 2736);
-    			attr_dev(main, "class", "svelte-16ydpxe");
-    			add_location(main, file$3, 101, 0, 2615);
+    			add_location(div, file$3, 122, 8, 3587);
+    			attr_dev(main, "class", "svelte-1drdosz");
+    			add_location(main, file$3, 120, 0, 3466);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$2("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3231,33 +3494,43 @@ var app = (function (exports) {
     			if (if_block1) if_block1.m(div, null);
     			append_dev(div, t17);
     			if (if_block2) if_block2.m(div, null);
-    			append_dev(main, t18);
-    			if (if_block3) if_block3.m(main, null);
+    			append_dev(div, t18);
+    			if (if_block3) if_block3.m(div, null);
+    			append_dev(div, t19);
+    			if (if_block4) if_block4.m(div, null);
+    			append_dev(div, t20);
+    			if (if_block5) if_block5.m(div, null);
+    			append_dev(div, t21);
+    			if (if_block6) if_block6.m(div, null);
+    			append_dev(div, t22);
+    			if (if_block7) if_block7.m(div, null);
+    			append_dev(main, t23);
+    			if (if_block8) if_block8.m(main, null);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    					listen_dev(input0, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    					listen_dev(input1, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[11]),
-    					listen_dev(input2, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[12]),
-    					listen_dev(input3, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[13]),
-    					listen_dev(input4, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[14]),
-    					listen_dev(input5, "focus", /*Open*/ ctx[8], false, false, false),
-    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[15]),
-    					listen_dev(input6, "focus", /*Open*/ ctx[8], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[14]),
+    					listen_dev(input0, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[15]),
+    					listen_dev(input1, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[16]),
+    					listen_dev(input2, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[17]),
+    					listen_dev(input3, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[18]),
+    					listen_dev(input4, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[19]),
+    					listen_dev(input5, "focus", /*Open*/ ctx[13], false, false, false),
+    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[20]),
+    					listen_dev(input6, "focus", /*Open*/ ctx[13], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*currClass*/ 2 && input0_class_value !== (input0_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input0_class_value !== (input0_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input0, "class", input0_class_value);
     			}
 
@@ -3265,7 +3538,7 @@ var app = (function (exports) {
     				set_input_value(input0, /*INPUT*/ ctx[0]['N']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input1_class_value !== (input1_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input1_class_value !== (input1_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input1, "class", input1_class_value);
     			}
 
@@ -3273,7 +3546,7 @@ var app = (function (exports) {
     				set_input_value(input1, /*INPUT*/ ctx[0]['P']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input2_class_value !== (input2_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input2_class_value !== (input2_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input2, "class", input2_class_value);
     			}
 
@@ -3281,23 +3554,23 @@ var app = (function (exports) {
     				set_input_value(input2, /*INPUT*/ ctx[0]['K']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input3_class_value !== (input3_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input3_class_value !== (input3_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input3, "class", input3_class_value);
     			}
 
-    			if (dirty & /*INPUT*/ 1 && input3.value !== /*INPUT*/ ctx[0]['Temp']) {
+    			if (dirty & /*INPUT*/ 1 && to_number(input3.value) !== /*INPUT*/ ctx[0]['Temp']) {
     				set_input_value(input3, /*INPUT*/ ctx[0]['Temp']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input4_class_value !== (input4_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input4_class_value !== (input4_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input4, "class", input4_class_value);
     			}
 
-    			if (dirty & /*INPUT*/ 1 && input4.value !== /*INPUT*/ ctx[0]['Hum']) {
+    			if (dirty & /*INPUT*/ 1 && to_number(input4.value) !== /*INPUT*/ ctx[0]['Hum']) {
     				set_input_value(input4, /*INPUT*/ ctx[0]['Hum']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input5_class_value !== (input5_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input5_class_value !== (input5_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input5, "class", input5_class_value);
     			}
 
@@ -3305,7 +3578,7 @@ var app = (function (exports) {
     				set_input_value(input5, /*INPUT*/ ctx[0]['pH']);
     			}
 
-    			if (!current || dirty & /*currClass*/ 2 && input6_class_value !== (input6_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-16ydpxe"))) {
+    			if (!current || dirty & /*currClass*/ 2 && input6_class_value !== (input6_class_value = "" + (null_to_empty(/*currClass*/ ctx[1]) + " svelte-1drdosz"))) {
     				attr_dev(input6, "class", input6_class_value);
     			}
 
@@ -3321,7 +3594,7 @@ var app = (function (exports) {
     						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block0 = create_if_block_3$3(ctx);
+    					if_block0 = create_if_block_8$1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
     					if_block0.m(div, t16);
@@ -3342,7 +3615,7 @@ var app = (function (exports) {
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block_2$3(ctx);
+    					if_block1 = create_if_block_7$1(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(div, t17);
@@ -3363,10 +3636,10 @@ var app = (function (exports) {
     						transition_in(if_block2, 1);
     					}
     				} else {
-    					if_block2 = create_if_block_1$3(ctx);
+    					if_block2 = create_if_block_6$1(ctx);
     					if_block2.c();
     					transition_in(if_block2, 1);
-    					if_block2.m(div, null);
+    					if_block2.m(div, t18);
     				}
     			} else if (if_block2) {
     				group_outros();
@@ -3378,24 +3651,129 @@ var app = (function (exports) {
     				check_outros();
     			}
 
-    			if (/*runML*/ ctx[2]) {
+    			if (/*N_invalid*/ ctx[7]) {
     				if (if_block3) {
-    					if_block3.p(ctx, dirty);
-
-    					if (dirty & /*runML*/ 4) {
+    					if (dirty & /*N_invalid*/ 128) {
     						transition_in(if_block3, 1);
     					}
     				} else {
-    					if_block3 = create_if_block$3(ctx);
+    					if_block3 = create_if_block_5$1(ctx);
     					if_block3.c();
     					transition_in(if_block3, 1);
-    					if_block3.m(main, null);
+    					if_block3.m(div, t19);
     				}
     			} else if (if_block3) {
     				group_outros();
 
     				transition_out(if_block3, 1, 1, () => {
     					if_block3 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*P_invalid*/ ctx[8]) {
+    				if (if_block4) {
+    					if (dirty & /*P_invalid*/ 256) {
+    						transition_in(if_block4, 1);
+    					}
+    				} else {
+    					if_block4 = create_if_block_4$2(ctx);
+    					if_block4.c();
+    					transition_in(if_block4, 1);
+    					if_block4.m(div, t20);
+    				}
+    			} else if (if_block4) {
+    				group_outros();
+
+    				transition_out(if_block4, 1, 1, () => {
+    					if_block4 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*K_invalid*/ ctx[9]) {
+    				if (if_block5) {
+    					if (dirty & /*K_invalid*/ 512) {
+    						transition_in(if_block5, 1);
+    					}
+    				} else {
+    					if_block5 = create_if_block_3$3(ctx);
+    					if_block5.c();
+    					transition_in(if_block5, 1);
+    					if_block5.m(div, t21);
+    				}
+    			} else if (if_block5) {
+    				group_outros();
+
+    				transition_out(if_block5, 1, 1, () => {
+    					if_block5 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*temp_invalid*/ ctx[10]) {
+    				if (if_block6) {
+    					if (dirty & /*temp_invalid*/ 1024) {
+    						transition_in(if_block6, 1);
+    					}
+    				} else {
+    					if_block6 = create_if_block_2$3(ctx);
+    					if_block6.c();
+    					transition_in(if_block6, 1);
+    					if_block6.m(div, t22);
+    				}
+    			} else if (if_block6) {
+    				group_outros();
+
+    				transition_out(if_block6, 1, 1, () => {
+    					if_block6 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*pH_invalid*/ ctx[11]) {
+    				if (if_block7) {
+    					if (dirty & /*pH_invalid*/ 2048) {
+    						transition_in(if_block7, 1);
+    					}
+    				} else {
+    					if_block7 = create_if_block_1$3(ctx);
+    					if_block7.c();
+    					transition_in(if_block7, 1);
+    					if_block7.m(div, null);
+    				}
+    			} else if (if_block7) {
+    				group_outros();
+
+    				transition_out(if_block7, 1, 1, () => {
+    					if_block7 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*runML*/ ctx[2]) {
+    				if (if_block8) {
+    					if_block8.p(ctx, dirty);
+
+    					if (dirty & /*runML*/ 4) {
+    						transition_in(if_block8, 1);
+    					}
+    				} else {
+    					if_block8 = create_if_block$3(ctx);
+    					if_block8.c();
+    					transition_in(if_block8, 1);
+    					if_block8.m(main, null);
+    				}
+    			} else if (if_block8) {
+    				group_outros();
+
+    				transition_out(if_block8, 1, 1, () => {
+    					if_block8 = null;
     				});
 
     				check_outros();
@@ -3458,6 +3836,11 @@ var app = (function (exports) {
     			transition_in(if_block0);
     			transition_in(if_block1);
     			transition_in(if_block2);
+    			transition_in(if_block3);
+    			transition_in(if_block4);
+    			transition_in(if_block5);
+    			transition_in(if_block6);
+    			transition_in(if_block7);
 
     			if (!div_intro) {
     				add_render_callback(() => {
@@ -3466,7 +3849,7 @@ var app = (function (exports) {
     				});
     			}
 
-    			transition_in(if_block3);
+    			transition_in(if_block8);
     			current = true;
     		},
     		o: function outro(local) {
@@ -3501,6 +3884,11 @@ var app = (function (exports) {
     			transition_out(if_block1);
     			transition_out(if_block2);
     			transition_out(if_block3);
+    			transition_out(if_block4);
+    			transition_out(if_block5);
+    			transition_out(if_block6);
+    			transition_out(if_block7);
+    			transition_out(if_block8);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -3517,6 +3905,11 @@ var app = (function (exports) {
     			if (if_block1) if_block1.d();
     			if (if_block2) if_block2.d();
     			if (if_block3) if_block3.d();
+    			if (if_block4) if_block4.d();
+    			if (if_block5) if_block5.d();
+    			if (if_block6) if_block6.d();
+    			if (if_block7) if_block7.d();
+    			if (if_block8) if_block8.d();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3536,7 +3929,7 @@ var app = (function (exports) {
     function instance$3($$self, $$props, $$invalidate) {
     	let $direction;
     	validate_store(direction, 'direction');
-    	component_subscribe($$self, direction, $$value => $$invalidate(16, $direction = $$value));
+    	component_subscribe($$self, direction, $$value => $$invalidate(21, $direction = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Crop', slots, []);
     	set_store_value(direction, $direction = 0, $direction);
@@ -3556,7 +3949,14 @@ var app = (function (exports) {
     	let runML = false;
     	let prediction = "";
     	let predictionDesc = "";
-    	let incomplete = false, invalid = false;
+
+    	let incomplete = false,
+    		invalid = false,
+    		N_invalid = false,
+    		P_invalid = false,
+    		K_invalid = false,
+    		temp_invalid = false,
+    		pH_invalid = false;
 
     	async function fetchPrediction() {
     		let ModelResponse = await fetch('/TriggerModel', {
@@ -3570,20 +3970,30 @@ var app = (function (exports) {
     	}
 
     	async function Find() {
-    		$$invalidate(6, invalid = false);
+    		$$invalidate(6, invalid = $$invalidate(7, N_invalid = $$invalidate(8, P_invalid = $$invalidate(9, K_invalid = $$invalidate(10, temp_invalid = $$invalidate(11, pH_invalid = false))))));
+    		let ret = false;
 
     		for (let K in INPUT) {
     			if (INPUT[K] < 0) {
-    				$$invalidate(6, invalid = true);
-    				return;
-    			}
+    				ret = $$invalidate(6, invalid = true);
+    			} // return;
 
     			if (INPUT[K] == null) {
-    				$$invalidate(5, incomplete = true);
-    				return;
-    			}
+    				ret = $$invalidate(5, incomplete = true);
+    			} // return;
     		}
 
+    		// if(ret)return;
+    		if ((INPUT['N'] < 0 || INPUT['N'] > 140) && INPUT['N'] != null) ret = $$invalidate(7, N_invalid = true);
+
+    		if ((INPUT['P'] < 5 || INPUT['P'] > 145) && INPUT['P'] != null) {
+    			ret = $$invalidate(8, P_invalid = true);
+    		}
+
+    		if ((INPUT['K'] < 5 || INPUT['K'] > 205) && INPUT['K'] != null) ret = $$invalidate(9, K_invalid = true);
+    		if ((INPUT['Temp'] < 8.8 || INPUT['Temp'] > 60) && INPUT['Temp'] != null) ret = $$invalidate(10, temp_invalid = true);
+    		if ((INPUT['pH'] < 3.5 || INPUT['pH'] > 10) && INPUT['pH'] != null) ret = $$invalidate(11, pH_invalid = true);
+    		if (ret) return;
     		$$invalidate(5, incomplete = false);
 
     		fetchPrediction().then(res => {
@@ -3643,12 +4053,12 @@ var app = (function (exports) {
     	}
 
     	function input3_input_handler() {
-    		INPUT['Temp'] = this.value;
+    		INPUT['Temp'] = to_number(this.value);
     		$$invalidate(0, INPUT);
     	}
 
     	function input4_input_handler() {
-    		INPUT['Hum'] = this.value;
+    		INPUT['Hum'] = to_number(this.value);
     		$$invalidate(0, INPUT);
     	}
 
@@ -3675,6 +4085,11 @@ var app = (function (exports) {
     		predictionDesc,
     		incomplete,
     		invalid,
+    		N_invalid,
+    		P_invalid,
+    		K_invalid,
+    		temp_invalid,
+    		pH_invalid,
     		fetchPrediction,
     		Find,
     		Open,
@@ -3690,6 +4105,11 @@ var app = (function (exports) {
     		if ('predictionDesc' in $$props) $$invalidate(4, predictionDesc = $$props.predictionDesc);
     		if ('incomplete' in $$props) $$invalidate(5, incomplete = $$props.incomplete);
     		if ('invalid' in $$props) $$invalidate(6, invalid = $$props.invalid);
+    		if ('N_invalid' in $$props) $$invalidate(7, N_invalid = $$props.N_invalid);
+    		if ('P_invalid' in $$props) $$invalidate(8, P_invalid = $$props.P_invalid);
+    		if ('K_invalid' in $$props) $$invalidate(9, K_invalid = $$props.K_invalid);
+    		if ('temp_invalid' in $$props) $$invalidate(10, temp_invalid = $$props.temp_invalid);
+    		if ('pH_invalid' in $$props) $$invalidate(11, pH_invalid = $$props.pH_invalid);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -3704,6 +4124,11 @@ var app = (function (exports) {
     		predictionDesc,
     		incomplete,
     		invalid,
+    		N_invalid,
+    		P_invalid,
+    		K_invalid,
+    		temp_invalid,
+    		pH_invalid,
     		Find,
     		Open,
     		input0_input_handler,
