@@ -7,4 +7,4 @@ Usage :
  
 `sudo sed -i 's/\r//g' encode_fix.sh`
  
-`sudo encode_fix.sh`
+`sudo bash encode_fix.sh`
