@@ -1,0 +1,11 @@
+Crop (input),quintal (input),price,Crop water need (mm/total growing period),total growing period (days)
+Paddy,,1940,1100 - 1250,90-150
+Jowar,,2758,450 - 650,120-130
+Bajara,,2250,450 - 650,105-140
+Maize,,1870,500 - 800,80-110
+Cotton,,5726,700 - 1300,180-195
+Groundnut,,5550,500 - 700,120-150
+Soyabean,,3950,450 - 700,135-150
+Wheat,,2015,450 - 650,120-150
+Barley,,1635,450 - 650,120-150
+Gram,,5230,310 - 325,100-120
