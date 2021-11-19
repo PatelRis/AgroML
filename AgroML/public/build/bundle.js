@@ -4160,7 +4160,7 @@ var app = (function (exports) {
     const { Error: Error_1$1, document: document_1$1, window: window_1$1 } = globals;
     const file$2 = "src\\Pages\\Disease.svelte";
 
-    // (192:4) {#if pageContent == 1  }
+    // (195:4) {#if pageContent == 1  }
     function create_if_block_1$2(ctx) {
     	let div1;
     	let div0;
@@ -4204,26 +4204,26 @@ var app = (function (exports) {
     			t4 = space();
     			img = element("img");
     			attr_dev(button, "class", "inp svelte-1ivovqy");
-    			add_location(button, file$2, 194, 16, 5563);
-    			add_location(div0, file$2, 193, 12, 5540);
+    			add_location(button, file$2, 197, 16, 5647);
+    			add_location(div0, file$2, 196, 12, 5624);
     			set_style(div1, "text-align", "left");
     			set_style(div1, "width", "30%");
     			set_style(div1, "float", "left");
-    			add_location(div1, file$2, 192, 8, 5429);
+    			add_location(div1, file$2, 195, 8, 5513);
     			attr_dev(img, "id", "upIMG");
     			if (!src_url_equal(img.src, img_src_value = /*imgSRC*/ ctx[11])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1ivovqy");
-    			add_location(img, file$2, 220, 20, 6898);
+    			add_location(img, file$2, 223, 20, 6982);
     			attr_dev(div2, "class", "imageWindow svelte-1ivovqy");
-    			add_location(div2, file$2, 210, 16, 6295);
+    			add_location(div2, file$2, 213, 16, 6379);
     			attr_dev(label, "for", "file-input");
-    			add_location(label, file$2, 209, 12, 6253);
+    			add_location(label, file$2, 212, 12, 6337);
     			set_style(div3, "text-align", "left");
     			set_style(div3, "width", "65%");
     			set_style(div3, "float", "left");
     			set_style(div3, "margin-left", "10px");
-    			add_location(div3, file$2, 208, 8, 6120);
+    			add_location(div3, file$2, 211, 8, 6204);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4363,14 +4363,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(192:4) {#if pageContent == 1  }",
+    		source: "(195:4) {#if pageContent == 1  }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:12) {#if showOUT}
+    // (202:12) {#if showOUT}
     function create_if_block_4$1(ctx) {
     	let div;
     	let h20;
@@ -4397,10 +4397,10 @@ var app = (function (exports) {
     			t3 = text("Condition: ");
     			t4 = text(t4_value);
     			t5 = text("\r\n                    Scroll down to know more");
-    			add_location(h20, file$2, 200, 20, 5903);
-    			add_location(h21, file$2, 201, 20, 5963);
+    			add_location(h20, file$2, 203, 20, 5987);
+    			add_location(h21, file$2, 204, 20, 6047);
     			attr_dev(div, "class", "modelWindow svelte-1ivovqy");
-    			add_location(div, file$2, 199, 16, 5823);
+    			add_location(div, file$2, 202, 16, 5907);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4443,14 +4443,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(199:12) {#if showOUT}",
+    		source: "(202:12) {#if showOUT}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:20) {#if Scanning}
+    // (215:20) {#if Scanning}
     function create_if_block_3$2(ctx) {
     	let div;
 
@@ -4460,7 +4460,7 @@ var app = (function (exports) {
     			attr_dev(div, "id", "ScanLine");
     			set_style(div, "top", /*linePos*/ ctx[7] + "%");
     			attr_dev(div, "class", "svelte-1ivovqy");
-    			add_location(div, file$2, 212, 24, 6499);
+    			add_location(div, file$2, 215, 24, 6583);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4479,14 +4479,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(212:20) {#if Scanning}",
+    		source: "(215:20) {#if Scanning}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:20) {#if isdropped == false}
+    // (218:20) {#if isdropped == false}
     function create_if_block_2$2(ctx) {
     	let t0;
     	let br0;
@@ -4511,12 +4511,12 @@ var app = (function (exports) {
     			t3 = text("    \r\n                        Click here to load image         \r\n                        ");
     			br4 = element("br");
     			br5 = element("br");
-    			add_location(br0, file$2, 215, 52, 6675);
-    			add_location(br1, file$2, 215, 56, 6679);
-    			add_location(br2, file$2, 216, 44, 6729);
-    			add_location(br3, file$2, 216, 52, 6737);
-    			add_location(br4, file$2, 218, 24, 6830);
-    			add_location(br5, file$2, 218, 28, 6834);
+    			add_location(br0, file$2, 218, 52, 6759);
+    			add_location(br1, file$2, 218, 56, 6763);
+    			add_location(br2, file$2, 219, 44, 6813);
+    			add_location(br3, file$2, 219, 52, 6821);
+    			add_location(br4, file$2, 221, 24, 6914);
+    			add_location(br5, file$2, 221, 28, 6918);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -4548,14 +4548,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(215:20) {#if isdropped == false}",
+    		source: "(218:20) {#if isdropped == false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (228:4) {#if pageContent == 2}
+    // (231:4) {#if pageContent == 2}
     function create_if_block$2(ctx) {
     	let div0;
     	let img;
@@ -4614,31 +4614,31 @@ var app = (function (exports) {
     			attr_dev(img, "alt", "[Image not avaliable]");
     			set_style(img, "min-height", "100%");
     			set_style(img, "min-width", "100%");
-    			add_location(img, file$2, 229, 12, 7263);
+    			add_location(img, file$2, 232, 12, 7347);
     			attr_dev(div0, "class", "modelWindow svelte-1ivovqy");
     			set_style(div0, "width", "30%");
     			set_style(div0, "height", "420px");
     			set_style(div0, "float", "left");
     			set_style(div0, "padding", "0");
     			set_style(div0, "overflow", "hidden");
-    			add_location(div0, file$2, 228, 8, 7112);
-    			add_location(h20, file$2, 234, 16, 7554);
+    			add_location(div0, file$2, 231, 8, 7196);
+    			add_location(h20, file$2, 237, 16, 7638);
     			attr_dev(div1, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div1, file$2, 233, 12, 7467);
-    			add_location(h21, file$2, 237, 16, 7695);
+    			add_location(div1, file$2, 236, 12, 7551);
+    			add_location(h21, file$2, 240, 16, 7779);
     			attr_dev(p0, "class", "svelte-1ivovqy");
-    			add_location(p0, file$2, 238, 16, 7733);
+    			add_location(p0, file$2, 241, 16, 7817);
     			attr_dev(div2, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div2, file$2, 236, 12, 7608);
-    			add_location(h22, file$2, 241, 16, 7872);
+    			add_location(div2, file$2, 239, 12, 7692);
+    			add_location(h22, file$2, 244, 16, 7956);
     			attr_dev(p1, "class", "svelte-1ivovqy");
-    			add_location(p1, file$2, 242, 16, 7915);
+    			add_location(p1, file$2, 245, 16, 7999);
     			attr_dev(div3, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div3, file$2, 240, 12, 7785);
+    			add_location(div3, file$2, 243, 12, 7869);
     			set_style(div4, "float", "left");
     			set_style(div4, "width", "60%");
     			set_style(div4, "margin-left", "10px");
-    			add_location(div4, file$2, 232, 8, 7398);
+    			add_location(div4, file$2, 235, 8, 7482);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4726,7 +4726,7 @@ var app = (function (exports) {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(228:4) {#if pageContent == 2}",
+    		source: "(231:4) {#if pageContent == 2}",
     		ctx
     	});
 
@@ -4768,13 +4768,13 @@ var app = (function (exports) {
     			if (if_block0) if_block0.c();
     			t4 = space();
     			if (if_block1) if_block1.c();
-    			add_location(h1, file$2, 189, 4, 5222);
+    			add_location(h1, file$2, 192, 4, 5306);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "OGfileINP");
     			set_style(input, "display", "none");
-    			add_location(input, file$2, 190, 4, 5321);
+    			add_location(input, file$2, 193, 4, 5405);
     			attr_dev(main, "class", "svelte-1ivovqy");
-    			add_location(main, file$2, 188, 0, 5206);
+    			add_location(main, file$2, 191, 0, 5290);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5000,6 +5000,7 @@ var app = (function (exports) {
     	}
 
     	async function CheckForDisease() {
+    		if (DropedFiles == null && files[0] == null) return;
     		$$invalidate(8, Scanning = true);
 
     		// showScanLine();
