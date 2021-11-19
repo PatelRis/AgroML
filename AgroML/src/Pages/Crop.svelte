@@ -10,7 +10,7 @@
     let runML = false;
     let prediction = "";
     let predictionDesc = "";
-    let incomplete = false, invalid = false;
+    let incomplete = false, invalid = false, N_invalid = false, P_invalid = false, K_invalid = false, temp_invalid = false, pH_invalid = false;
 
     async function fetchPrediction() 
     {        
@@ -22,23 +22,42 @@
 
     async function Find()
     {       
-        invalid = false;  
+        invalid =  N_invalid =  P_invalid = K_invalid = temp_invalid = pH_invalid = false;
+        let ret = false; 
         for(let K in INPUT)
         {
             if(INPUT[K] < 0)
             {
-                invalid = true;
-                return;
+                ret = invalid = true;
+                // return;
             }
             
             if(INPUT[K] == null)
             {                
-                incomplete = true;
-                return;
+                ret = incomplete = true;
+                // return;
             }
             
         }
-        incomplete = false;
+        // if(ret)return;
+        if((INPUT['N'] < 0 || INPUT['N'] > 140) && INPUT['N']!=null)
+            ret = N_invalid = true;
+
+        if((INPUT['P'] < 5 || INPUT['P'] > 145) && INPUT['P'] != null)
+            {ret = P_invalid = true;}
+        
+        if((INPUT['K'] < 5 || INPUT['K'] > 205) && INPUT['K'] != null)
+            ret = K_invalid = true;
+        
+        if((INPUT['Temp'] < 8.8 || INPUT['Temp'] > 60) && INPUT['Temp'] != null)
+            ret = temp_invalid = true;
+
+        if((INPUT['pH'] < 3.5 || INPUT['pH'] > 10) && INPUT['pH'] != null)
+            ret = pH_invalid = true;
+
+        if(ret)return;
+
+        incomplete  = false;
         
         fetchPrediction()
             .then(
@@ -105,8 +124,8 @@
             <input type="number" class="{currClass}" bind:value={INPUT['N']} transition:scale="{{delay:200, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Nitrogen"> <br>
             <input type="number" class="{currClass}" bind:value={INPUT['P']} transition:scale="{{delay:250, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Phosphorus"> <br>
             <input type="number" class="{currClass}" bind:value={INPUT['K']} transition:scale="{{delay:300, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Potasium"> <br>
-            <input type="text" class="{currClass}" bind:value={INPUT['Temp']} transition:scale="{{delay:330, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Temperature"> <br>
-            <input type="text" class="{currClass}" bind:value={INPUT['Hum']} transition:scale="{{delay:390, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Humidity"> <br>
+            <input type="number" class="{currClass}" bind:value={INPUT['Temp']} transition:scale="{{delay:330, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Temperature"> <br>
+            <input type="number" class="{currClass}" bind:value={INPUT['Hum']} transition:scale="{{delay:390, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Humidity"> <br>
             <input type="number" class="{currClass}" bind:value={INPUT['pH']} transition:scale="{{delay:420, duration: 400, start: 0}}"on:focus="{Open}" placeholder="pH level"> <br>
             <input type="number" class="{currClass}" bind:value={INPUT['Rfall']}  transition:scale="{{delay:450, duration: 400, start: 0}}" on:focus="{Open}" placeholder="Rainfall (in mm)"> <br>        
             {#if currClass =="inp"}
@@ -115,10 +134,39 @@
                 </button>        
             {/if}
             {#if incomplete}
-                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" style="color: red;padding-left: 20px;">Enter all details </div>
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG">
+                    Enter all details 
+                </div>
             {/if}
             {#if invalid}
-            <div transition:scale="{{duration:200, start:0, opacity:0.1}}" style="color: red;padding-left: 20px;">Entered values are invalid </div>
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    Entered values are invalid
+                </div>
+            {/if}
+            {#if N_invalid}
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    Nitrogen value is invalid to grow any crop 
+                </div>
+            {/if}
+            {#if P_invalid}
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    Phosphorous value is invalid to grow any crop 
+                </div>
+            {/if}
+            {#if K_invalid}
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    Potassium value is invalid to grow any crop
+                </div>
+            {/if}
+            {#if temp_invalid}
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    Temperature is invalid to grow any crop
+                </div>
+            {/if}
+            {#if pH_invalid}
+                <div transition:scale="{{duration:200, start:0, opacity:0.1}}" class="errMSG" >
+                    pH value is invalid to grow any crop
+                </div>
             {/if}
         </div>    
     
@@ -187,6 +235,11 @@
         /* transition: height 0.3s; */
     }
    
+    .errMSG
+    {
+        color: red;
+        padding-left: 20px;
+    }
     .cmptINP
     {
         border-radius: 60px;
