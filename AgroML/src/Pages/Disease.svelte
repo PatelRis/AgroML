@@ -190,7 +190,7 @@ import { bind } from 'svelte/internal';
 <svelte:body on:wheel={handleMousemove}/>
 <svelte:window bind:scrollY={Y}/>
 <main>    
-    <h1 transition:scale="{{duration:800,delay:50, opacity:0.5, start:0}}">Plant Diesase</h1>    
+    <h1 transition:scale="{{duration:800,delay:50, opacity:0.5, start:0}}">Plant Disease Detection</h1>    
     <input type="file" id="OGfileINP" bind:files style="display: none;">
     {#if pageContent == 1  }
         <div in:fade="{{duration:200,delay:200}}" style="text-align: left; width: 30%; float:left; " >   

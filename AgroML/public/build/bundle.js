@@ -4204,26 +4204,26 @@ var app = (function (exports) {
     			t4 = space();
     			img = element("img");
     			attr_dev(button, "class", "inp svelte-1ivovqy");
-    			add_location(button, file$2, 197, 16, 5647);
-    			add_location(div0, file$2, 196, 12, 5624);
+    			add_location(button, file$2, 197, 16, 5657);
+    			add_location(div0, file$2, 196, 12, 5634);
     			set_style(div1, "text-align", "left");
     			set_style(div1, "width", "30%");
     			set_style(div1, "float", "left");
-    			add_location(div1, file$2, 195, 8, 5513);
+    			add_location(div1, file$2, 195, 8, 5523);
     			attr_dev(img, "id", "upIMG");
     			if (!src_url_equal(img.src, img_src_value = /*imgSRC*/ ctx[11])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1ivovqy");
-    			add_location(img, file$2, 223, 20, 6982);
+    			add_location(img, file$2, 223, 20, 6992);
     			attr_dev(div2, "class", "imageWindow svelte-1ivovqy");
-    			add_location(div2, file$2, 213, 16, 6379);
+    			add_location(div2, file$2, 213, 16, 6389);
     			attr_dev(label, "for", "file-input");
-    			add_location(label, file$2, 212, 12, 6337);
+    			add_location(label, file$2, 212, 12, 6347);
     			set_style(div3, "text-align", "left");
     			set_style(div3, "width", "65%");
     			set_style(div3, "float", "left");
     			set_style(div3, "margin-left", "10px");
-    			add_location(div3, file$2, 211, 8, 6204);
+    			add_location(div3, file$2, 211, 8, 6214);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4397,10 +4397,10 @@ var app = (function (exports) {
     			t3 = text("Condition: ");
     			t4 = text(t4_value);
     			t5 = text("\r\n                    Scroll down to know more");
-    			add_location(h20, file$2, 203, 20, 5987);
-    			add_location(h21, file$2, 204, 20, 6047);
+    			add_location(h20, file$2, 203, 20, 5997);
+    			add_location(h21, file$2, 204, 20, 6057);
     			attr_dev(div, "class", "modelWindow svelte-1ivovqy");
-    			add_location(div, file$2, 202, 16, 5907);
+    			add_location(div, file$2, 202, 16, 5917);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4460,7 +4460,7 @@ var app = (function (exports) {
     			attr_dev(div, "id", "ScanLine");
     			set_style(div, "top", /*linePos*/ ctx[7] + "%");
     			attr_dev(div, "class", "svelte-1ivovqy");
-    			add_location(div, file$2, 215, 24, 6583);
+    			add_location(div, file$2, 215, 24, 6593);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4511,12 +4511,12 @@ var app = (function (exports) {
     			t3 = text("    \r\n                        Click here to load image         \r\n                        ");
     			br4 = element("br");
     			br5 = element("br");
-    			add_location(br0, file$2, 218, 52, 6759);
-    			add_location(br1, file$2, 218, 56, 6763);
-    			add_location(br2, file$2, 219, 44, 6813);
-    			add_location(br3, file$2, 219, 52, 6821);
-    			add_location(br4, file$2, 221, 24, 6914);
-    			add_location(br5, file$2, 221, 28, 6918);
+    			add_location(br0, file$2, 218, 52, 6769);
+    			add_location(br1, file$2, 218, 56, 6773);
+    			add_location(br2, file$2, 219, 44, 6823);
+    			add_location(br3, file$2, 219, 52, 6831);
+    			add_location(br4, file$2, 221, 24, 6924);
+    			add_location(br5, file$2, 221, 28, 6928);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -4614,31 +4614,31 @@ var app = (function (exports) {
     			attr_dev(img, "alt", "[Image not avaliable]");
     			set_style(img, "min-height", "100%");
     			set_style(img, "min-width", "100%");
-    			add_location(img, file$2, 232, 12, 7347);
+    			add_location(img, file$2, 232, 12, 7357);
     			attr_dev(div0, "class", "modelWindow svelte-1ivovqy");
     			set_style(div0, "width", "30%");
     			set_style(div0, "height", "420px");
     			set_style(div0, "float", "left");
     			set_style(div0, "padding", "0");
     			set_style(div0, "overflow", "hidden");
-    			add_location(div0, file$2, 231, 8, 7196);
-    			add_location(h20, file$2, 237, 16, 7638);
+    			add_location(div0, file$2, 231, 8, 7206);
+    			add_location(h20, file$2, 237, 16, 7648);
     			attr_dev(div1, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div1, file$2, 236, 12, 7551);
-    			add_location(h21, file$2, 240, 16, 7779);
+    			add_location(div1, file$2, 236, 12, 7561);
+    			add_location(h21, file$2, 240, 16, 7789);
     			attr_dev(p0, "class", "svelte-1ivovqy");
-    			add_location(p0, file$2, 241, 16, 7817);
+    			add_location(p0, file$2, 241, 16, 7827);
     			attr_dev(div2, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div2, file$2, 239, 12, 7692);
-    			add_location(h22, file$2, 244, 16, 7956);
+    			add_location(div2, file$2, 239, 12, 7702);
+    			add_location(h22, file$2, 244, 16, 7966);
     			attr_dev(p1, "class", "svelte-1ivovqy");
-    			add_location(p1, file$2, 245, 16, 7999);
+    			add_location(p1, file$2, 245, 16, 8009);
     			attr_dev(div3, "class", "modelWindow customMW svelte-1ivovqy");
-    			add_location(div3, file$2, 243, 12, 7869);
+    			add_location(div3, file$2, 243, 12, 7879);
     			set_style(div4, "float", "left");
     			set_style(div4, "width", "60%");
     			set_style(div4, "margin-left", "10px");
-    			add_location(div4, file$2, 235, 8, 7482);
+    			add_location(div4, file$2, 235, 8, 7492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4761,7 +4761,7 @@ var app = (function (exports) {
     			t0 = space();
     			main = element("main");
     			h1 = element("h1");
-    			h1.textContent = "Plant Diesase";
+    			h1.textContent = "Plant Disease Detection";
     			t2 = space();
     			input = element("input");
     			t3 = space();
@@ -4772,7 +4772,7 @@ var app = (function (exports) {
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "OGfileINP");
     			set_style(input, "display", "none");
-    			add_location(input, file$2, 193, 4, 5405);
+    			add_location(input, file$2, 193, 4, 5415);
     			attr_dev(main, "class", "svelte-1ivovqy");
     			add_location(main, file$2, 191, 0, 5290);
     		},
