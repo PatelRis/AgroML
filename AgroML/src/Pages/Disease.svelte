@@ -101,6 +101,9 @@ import { bind } from 'svelte/internal';
 
     async function CheckForDisease()
     {        
+        if(DropedFiles == null && files[0] == null)
+            return;
+        
         Scanning = true;
         // showScanLine();
         var ScanThread = setInterval(showScanLine, 1600);        
