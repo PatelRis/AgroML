@@ -66,3 +66,9 @@ gives 99.2% accuracy.
 - Tomato
 - Squash
 - Raspberry
+
+
+# System Design
+
+![alt text](https://i.imgur.com/01D8XtW.png)
+
