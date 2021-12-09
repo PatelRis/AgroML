@@ -16,7 +16,7 @@ gives 99.2% accuracy.
 
 
 # Built with 🛠️
-<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code><br>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
@@ -36,16 +36,16 @@ gives 99.2% accuracy.
 
 ### Home Page
 
-![alt text](https://i.imgur.com/bmoxDIi.jpeg)
+![alt text](https://i.imgur.com/bmoxDIi.jpeg)<br>
 
 ### Crop Prediction
 
-![alt text](https://i.imgur.com/1tzR6D1.jpeg)
+![alt text](https://i.imgur.com/1tzR6D1.jpeg)<br>
 
 ### Crop Yield Analysis
 
-![alt text](https://i.imgur.com/jfK98zq.jpeg)
+![alt text](https://i.imgur.com/jfK98zq.jpeg)<br>
 
 ### Plant Disease Detection
 
-![alt text](https://i.imgur.com/KUAgcKj.jpeg)
+![alt text](https://i.imgur.com/KUAgcKj.jpeg)<br>
