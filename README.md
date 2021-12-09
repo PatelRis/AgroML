@@ -47,3 +47,23 @@ gives 99.2% accuracy.
 ## Plant Disease Detection ☘️
 
 ![alt text](https://i.imgur.com/KUAgcKj.jpeg)<br>
+
+<details>
+  <summary>Supported crops
+</summary>
+
+- Apple
+- Blueberry
+- Cherry
+- Corn
+- Grape
+- Pepper
+- Orange
+- Peach
+- Potato
+- Soybean
+- Strawberry
+- Tomato
+- Squash
+- Raspberry
+</details>
