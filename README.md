@@ -48,9 +48,9 @@ gives 99.2% accuracy.
 
 ![alt text](https://i.imgur.com/KUAgcKj.jpeg)<br>
 
-<details>
-  <summary>Supported crops
-</summary>
+
+### Supported crops
+
 
 - Apple
 - Blueberry
@@ -66,4 +66,3 @@ gives 99.2% accuracy.
 - Tomato
 - Squash
 - Raspberry
-</details>
