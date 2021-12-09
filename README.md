@@ -70,5 +70,5 @@ gives 99.2% accuracy.
 
 # System Design
 
-![alt text](https://i.imgur.com/01D8XtW.png)
+![alt text](https://i.imgur.com/eZ6ORHi.png)
 
